@@ -10,3 +10,10 @@ dependencies:
 test:
   override:
     - ./node_modules/spacejam/bin/spacejam test-packages ./ --release=1.3-rc.2
+
+deployment:
+  production:
+    branch: "master"
+    commands:
+      - echo $METEOR_TOKEN > deployment_token.json
+      - METEOR_SESSION_FILE=deployment_token.json meteor publish
