@@ -1,0 +1,12 @@
+dependencies:
+  cache_directories:
+    - ~/.meteor
+    - ./node_modules
+  override:
+    - meteor || curl https://install.meteor.com | /bin/sh
+    - curl https://install.meteor.com | /bin/sh
+    - npm install spacejam
+
+test:
+  override:
+    - ./node_modules/spacejam/bin/spacejam test-packages ./ --release=1.3-rc.2
