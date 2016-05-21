@@ -1,6 +1,6 @@
 Package.describe({
   name: 'maximum:promise-subscribe',
-  version: '0.1.1',
+  version: '0.1.2',
   // Brief, one-line summary of the package.
   summary: 'Promise support for subscriptions',
   // URL to the Git repository containing the source code for this package.
@@ -11,7 +11,7 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.3-rc.2');
+  api.versionsFrom('1.3.2.4');
   api.use('ecmascript');
   api.use('modules')
   api.mainModule('promise-subscribe.js');
