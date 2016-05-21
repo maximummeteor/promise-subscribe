@@ -6,7 +6,8 @@ import { promiseSubscribe } from 'meteor/maximum:promise-subscribe';
 if (Meteor.isClient) {
   Tinytest.addAsync('promise-subscribe - resolve', (test, next) => {
     const collection = new Mongo.Collection('test')
-    promiseSubscribe.call(Meteor, 'test', 1, 2, 3).then(() => {
+    promiseSubscribe.call(Meteor, 'test', 1, 2, 3).then((subscription) => {
+      test.equal(subscription.name, 'test')
       const item = collection.findOne()
       test.equal(item.arg1, 1)
       test.equal(item.arg2, 2)
