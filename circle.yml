@@ -6,7 +6,6 @@ dependencies:
     - which meteor || sudo cp ~/.meteor/meteor_saved /usr/local/bin/meteor || curl https://install.meteor.com | /bin/sh
     - cp /usr/local/bin/meteor ~/.meteor/meteor_saved
     - meteor update --release=1.3.2.4
-    - meteor --prepare-app
     - npm install
     - npm install spacejam
 
